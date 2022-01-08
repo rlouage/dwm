@@ -1,3 +1,8 @@
 *.o
 config.h
 dwm
+dwm-6*
+*.orig
+*.rej
+
+

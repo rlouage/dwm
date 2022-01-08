@@ -3,7 +3,7 @@
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
+static const unsigned int systraypinning = 1;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayonleft = 0;   	/* 0: systray in the right corner, >0: systray on left of status text */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
@@ -101,7 +101,7 @@ static Key keys[] = {
 	TAGKEYS(                16,                    6)                 // 7
 	TAGKEYS(                17,                    7)                 // 8
 	TAGKEYS(                18,                    8)                 // 9
-	{ MODKEY|ShiftMask,     24,    quit,           {0} },             // q
+	{ MODKEY|ShiftMask,     38,    quit,           {0} },             // q
 };
 
 /* button definitions */

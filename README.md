@@ -8,6 +8,7 @@ See [suckless.org](https://dwm.suckless.org "dwm.suckless.org") for the original
 - [autostart](https://dwm.suckless.org/patches/autostart/ "autostart"): This patch will make dwm run "~/.dwm/autostart.sh &" before entering the handler loop.
 - [Keycodes](https://dwm.suckless.org/patches/keycodes/ "keycodes"): With this patch, handling key input is done with keycodes instead of keysyms. This way, input is independent from keyboard layout (you can get keycodes using xev to adapt config.h. This is useful for people that use azerty keyboard layouts.
 - [statusbar on all monitors](https://dwm.suckless.org/patches/statusallmons/ "statusbar on all monitors"): This patch draws and updates the statusbar on all monitors. This system trays are only drawn on the active monitor.
+- [vanitygaps](https://dwm.suckless.org/patches/vanitygaps/ "vanitygaps"): Inspired by some of the functionality of i3-gaps this patch adds (inner) gaps between client windows and (outer) gaps between windows and the screen edge in a flexible manner.
 
 ## Installation
 Clone this repository in whatever folder you want to keep the source code in, then go in the cloned directory and build the package:

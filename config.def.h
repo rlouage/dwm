@@ -3,6 +3,11 @@
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
+static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 10;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 10;       /* vert outer gap between windows and screen edge */
+static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const unsigned int systraypinning = 1;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayonleft = 0;   	/* 0: systray in the right corner, >0: systray on left of status text */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
@@ -78,6 +83,22 @@ static Key keys[] = {
 	{ MODKEY,               40,    incnmaster,     {.i = -1 } },      // d
 	{ MODKEY,               43,    setmfact,       {.f = -0.05} },    // h
 	{ MODKEY,               46,    setmfact,       {.f = +0.05} },    // l
+    { MODKEY|Mod4Mask,              43,      incrgaps,       {.i = +1 } }, // h
+    { MODKEY|Mod4Mask,              46,      incrgaps,       {.i = -1 } }, // l
+    { MODKEY|Mod4Mask|ShiftMask,    43,      incrogaps,      {.i = +1 } },
+    { MODKEY|Mod4Mask|ShiftMask,    46,      incrogaps,      {.i = -1 } },
+    { MODKEY|Mod4Mask|ControlMask,  43,      incrigaps,      {.i = +1 } },
+    { MODKEY|Mod4Mask|ControlMask,  46,      incrigaps,      {.i = -1 } },
+    { MODKEY|Mod4Mask,              90,      togglegaps,     {0} }, // 0
+    { MODKEY|Mod4Mask|ShiftMask,    90,      defaultgaps,    {0} },
+    { MODKEY,                       29,      incrihgaps,     {.i = +1 } }, // y
+    { MODKEY,                       32,      incrihgaps,     {.i = -1 } }, // o
+    { MODKEY|ControlMask,           29,      incrivgaps,     {.i = +1 } },
+    { MODKEY|ControlMask,           32,      incrivgaps,     {.i = -1 } },
+    { MODKEY|Mod4Mask,              29,      incrohgaps,     {.i = +1 } },
+    { MODKEY|Mod4Mask,              32,      incrohgaps,     {.i = -1 } },
+    { MODKEY|ShiftMask,             29,      incrovgaps,     {.i = +1 } },
+    { MODKEY|ShiftMask,             32,      incrovgaps,     {.i = -1 } },
 	{ MODKEY,               36,    zoom,           {0} },             // Return
 	{ MODKEY,               23,    view,           {0} },             // Tab
 	{ MODKEY|ShiftMask,     54,    killclient,     {0} },             // c

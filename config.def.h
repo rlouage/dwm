@@ -57,7 +57,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -83,20 +83,20 @@ static Key keys[] = {
 	{ MODKEY,               40,    incnmaster,     {.i = -1 } },      // d
 	{ MODKEY,               43,    setmfact,       {.f = -0.05} },    // h
 	{ MODKEY,               46,    setmfact,       {.f = +0.05} },    // l
-    { MODKEY|Mod4Mask,              43,      incrgaps,       {.i = +1 } }, // h
-    { MODKEY|Mod4Mask,              46,      incrgaps,       {.i = -1 } }, // l
-    { MODKEY|Mod4Mask|ShiftMask,    43,      incrogaps,      {.i = +1 } },
-    { MODKEY|Mod4Mask|ShiftMask,    46,      incrogaps,      {.i = -1 } },
-    { MODKEY|Mod4Mask|ControlMask,  43,      incrigaps,      {.i = +1 } },
-    { MODKEY|Mod4Mask|ControlMask,  46,      incrigaps,      {.i = -1 } },
-    { MODKEY|Mod4Mask,              90,      togglegaps,     {0} }, // 0
-    { MODKEY|Mod4Mask|ShiftMask,    90,      defaultgaps,    {0} },
+    { MODKEY|Mod1Mask,              43,      incrgaps,       {.i = +1 } }, // h
+    { MODKEY|Mod1Mask,              46,      incrgaps,       {.i = -1 } }, // l
+    { MODKEY|Mod1Mask|ShiftMask,    43,      incrogaps,      {.i = +1 } },
+    { MODKEY|Mod1Mask|ShiftMask,    46,      incrogaps,      {.i = -1 } },
+    { MODKEY|Mod1Mask|ControlMask,  43,      incrigaps,      {.i = +1 } },
+    { MODKEY|Mod1Mask|ControlMask,  46,      incrigaps,      {.i = -1 } },
+    { MODKEY|Mod1Mask,              90,      togglegaps,     {0} }, // 0
+    { MODKEY|Mod1Mask|ShiftMask,    90,      defaultgaps,    {0} },
     { MODKEY,                       29,      incrihgaps,     {.i = +1 } }, // y
     { MODKEY,                       32,      incrihgaps,     {.i = -1 } }, // o
     { MODKEY|ControlMask,           29,      incrivgaps,     {.i = +1 } },
     { MODKEY|ControlMask,           32,      incrivgaps,     {.i = -1 } },
-    { MODKEY|Mod4Mask,              29,      incrohgaps,     {.i = +1 } },
-    { MODKEY|Mod4Mask,              32,      incrohgaps,     {.i = -1 } },
+    { MODKEY|Mod1Mask,              29,      incrohgaps,     {.i = +1 } },
+    { MODKEY|Mod1Mask,              32,      incrohgaps,     {.i = -1 } },
     { MODKEY|ShiftMask,             29,      incrovgaps,     {.i = +1 } },
     { MODKEY|ShiftMask,             32,      incrovgaps,     {.i = -1 } },
 	{ MODKEY,               36,    zoom,           {0} },             // Return

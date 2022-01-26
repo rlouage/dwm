@@ -11,7 +11,7 @@ See [suckless.org](https://dwm.suckless.org "dwm.suckless.org") for the original
 - [vanitygaps](https://dwm.suckless.org/patches/vanitygaps/ "vanitygaps"): Inspired by some of the functionality of i3-gaps this patch adds (inner) gaps between client windows and (outer) gaps between windows and the screen edge in a flexible manner.
 
 ## Installation
-Clone this repository in whatever folder you want to keep the source code in, then go in the cloned directory and build the package:
+Clone this repository in whatever folder you want, then go in the cloned directory and build the package:
 
 ```bash
   git clone https://www.github.com/rlouage/dwm

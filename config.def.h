@@ -74,11 +74,13 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *upvol[]   = { "pamixer", "-i", "5", NULL };
 static const char *downvol[] = { "pamixer", "-d", "5", NULL };
 static const char *mutevol[] = { "pamixer", "-t", NULL };
+static const char *fmcmd[] = { "pcmanfm",  NULL };
 
 static Key keys[] = {
 	/* modifier             key    function        argument */
 	{ MODKEY,               33,    spawn,          {.v = dmenucmd } }, // p
 	{ MODKEY|ShiftMask,     36,    spawn,          {.v = termcmd } }, // Return
+	{ MODKEY|ShiftMask,     41,    spawn,          {.v = fmcmd } }, // f
 	{ 0,               121,    spawn,          {.v = mutevol } }, // mute
 	{ 0,               122,    spawn,          {.v = downvol } }, // vol down
 	{ 0,               123,    spawn,          {.v = upvol } }, // vol up
